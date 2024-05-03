@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digite a senha:</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: rgb(136, 211, 60); font-size: 36px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5px; font-weight: 400; text-shadow: 0 0 8px black;">Digite a senha:</h1>
+        <input name="senha" id="senha" style="width: 300px; height: 40px; font-size: 24px; font-weight: bold; text-align: center; margin-top: 20px;">
+        <!-- <button  style='width: 100%; height: 40px; background-color: red; font-size: 18px; font-weight: 800; margin-top: 30px; opacity: 0; transition: 2s;'>Entrar</button> -->
+<button id="entrar" style="cursor: pointer; margin-top:20px; width: 100%; height: 40px; background: rgb(88, 88, 210); font-size: 20px;">Entrar</button>
+      </div>
+
+
+</body>
+</html>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 40px 60px 40px;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.264);
+        margin-top: 150px;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+</style>
+
+<script>
+    document.getElementById('entrar').addEventListener('click', function() {
+        var senha = document.getElementById('senha').value;
+        if (senha.toUpperCase() === "ELENOOMAIOR123") {
+            window.location.href = "./pediraumento.html";
+        } else {
+            alert("Senha incorreta");
+        }
+    });
+</script>
